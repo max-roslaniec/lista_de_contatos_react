@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# Lista de Contatos - Exercício EBAC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples construído como parte do curso da EBAC (Escola Britânica de Artes Criativas e Tecnologia). O objetivo do projeto é criar uma Lista de Contatos funcional.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Adicionar contato:** Insira nome completo, e-mail e telefone para salvar um novo contato.
+- **Editar contato:** Atualize as informações de contatos já salvos na lista.
+- **Remover contato:** Exclua contatos que não precisa mais.
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para construir esse projeto, utilizei as seguintes tecnologias ensinadas no curso:
+- **React:** Para construir a interface (tela).
+- **Redux Toolkit:** Para guardar os dados dos contatos de forma organizada.
+- **Styled Components:** Para deixar a tela bonita (estilização/CSS).
+- **TypeScript:** Para ajudar a não cometer erros bobos no código.
+- **Vite:** Para criar o projeto bem mais rápido.
 
-## Expanding the ESLint configuration
+## Como rodar o projeto na sua máquina
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Siga os passos abaixo caso queira baixar o projeto e testar no seu próprio computador:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Baixe os arquivos do projeto (ou clone o repositório).
+2. Abra a pasta do projeto no seu terminal (ou abra pelo VS Code e use o terminal dele).
+3. Instale os pacotes necessários digitando:
+   ```bash
+   npm install
+   ```
+4. Inicie o projeto rodando o comando:
+   ```bash
+   npm run dev
+   ```
+5. O terminal vai mostrar um link (geralmente `http://localhost:5173`). É só segurar a tecla "Ctrl" e clicar no link para abrir no seu navegador!
